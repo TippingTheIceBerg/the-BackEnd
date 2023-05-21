@@ -1,1 +1,2 @@
 # the-BackEnd
+Welcome to the basics of back ends programming. We will input here all tips/tricks and practices learned for backend. For front-end please look under the github for that file type. Thank you.
