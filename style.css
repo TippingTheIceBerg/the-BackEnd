@@ -30,35 +30,27 @@ main {
   flex-direction: column;
 }
 
-.banner__container > h1 {
+h1 {
   margin: 0 auto;
-  padding: 70px 20px;
-  border: dotted 1px white;
-}
-
-.panel {
-  width: 100px;
-  height: 100px;
-  border: solid white 1px;
+  padding: 30px 0px;
   position: relative;
-  overflow: hidden;
-}
-
-.panel::before {
-  content: "Hello World";
-  font-size: 100px;
-  position: absolute;
-  width: -moz-max-content;
-  width: max-content;
-  left: var(--left);
+  border-radius: 200px;
 }
 
 .banner__container {
-  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 12s infinite linear;
 }
 
+@keyframes rotate {
+  to {
+    transform: rotateY(-360deg);
+  }
+}
 section {
   display: flex;
+  perspective: 500px;
+  perspective-origin: 50% calc(50% - 120px);
 }
 
 section > h2 {
@@ -66,94 +58,200 @@ section > h2 {
   padding: 20px 0;
 }
 
+.panel:nth-child(1) {
+  --left: 0px;
+  --hue: 0;
+  --angle: 0deg;
+  --index:0;
+}
+
 .panel:nth-child(2) {
-  --left: -100px ;
+  --left: -50px;
+  --hue: 15;
+  --angle: 15deg;
+  --index:3;
 }
 
 .panel:nth-child(3) {
-  --left: -200px ;
+  --left: -100px;
+  --hue: 30;
+  --angle: 30deg;
+  --index:6;
 }
 
 .panel:nth-child(4) {
-  --left: -300px ;
+  --left: -150px;
+  --hue: 45;
+  --angle: 45deg;
+  --index:9;
 }
 
 .panel:nth-child(5) {
-  --left: -400px ;
+  --left: -200px;
+  --hue: 60;
+  --angle: 60deg;
+  --index:12;
 }
 
 .panel:nth-child(6) {
-  --left: -500px ;
+  --left: -250px;
+  --hue: 75;
+  --angle: 75deg;
+  --index:15;
 }
 
 .panel:nth-child(7) {
-  --left: -600px ;
+  --left: -300px;
+  --hue: 90;
+  --angle: 90deg;
+  --index:18;
 }
 
 .panel:nth-child(8) {
-  --left: -700px ;
+  --left: -350px;
+  --hue: 105;
+  --angle: 105deg;
+  --index:21;
 }
 
 .panel:nth-child(9) {
-  --left: -800px ;
+  --left: -400px;
+  --hue: 120;
+  --angle: 120deg;
+  --index:24;
 }
 
 .panel:nth-child(10) {
-  --left: -900px ;
+  --left: -450px;
+  --hue: 135;
+  --angle: 135deg;
+  --index:27;
 }
 
 .panel:nth-child(11) {
-  --left: -1000px ;
+  --left: -500px;
+  --hue: 150;
+  --angle: 150deg;
+  --index:30;
 }
 
 .panel:nth-child(12) {
-  --left: -1100px ;
+  --left: -550px;
+  --hue: 165;
+  --angle: 165deg;
+  --index:33;
 }
 
 .panel:nth-child(13) {
-  --left: -1200px ;
+  --left: -600px;
+  --hue: 180;
+  --angle: 180deg;
+  --index:36;
 }
 
 .panel:nth-child(14) {
-  --left: -1300px ;
+  --left: -650px;
+  --hue: 195;
+  --angle: 195deg;
+  --index:39;
 }
 
 .panel:nth-child(15) {
-  --left: -1400px ;
+  --left: -700px;
+  --hue: 210;
+  --angle: 210deg;
+  --index:42;
 }
 
 .panel:nth-child(16) {
-  --left: -1500px ;
+  --left: -750px;
+  --hue: 225;
+  --angle: 225deg;
+  --index:45;
 }
 
 .panel:nth-child(17) {
-  --left: -1600px ;
+  --left: -800px;
+  --hue: 240;
+  --angle: 240deg;
+  --index:48;
 }
 
 .panel:nth-child(18) {
-  --left: -1700px ;
+  --left: -850px;
+  --hue: 255;
+  --angle: 255deg;
+  --index:51;
 }
 
 .panel:nth-child(19) {
-  --left: -1800px ;
+  --left: -900px;
+  --hue: 270;
+  --angle: 270deg;
+  --index:54;
 }
 
 .panel:nth-child(20) {
-  --left: -1900px ;
+  --left: -950px;
+  --hue: 285;
+  --angle: 285deg;
+  --index:57;
 }
 
 .panel:nth-child(21) {
-  --left: -2000px ;
+  --left: -1000px;
+  --hue: 300;
+  --angle: 300deg;
+  --index:60;
 }
 
 .panel:nth-child(22) {
-  --left: -2100px ;
+  --left: -1050px;
+  --hue: 315;
+  --angle: 315deg;
+  --index:63;
 }
 
 .panel:nth-child(23) {
-  --left: -2200px ;
+  --left: -1100px;
+  --hue: 330;
+  --angle: 330deg;
+  --index:66;
 }
 
 .panel:nth-child(24) {
-  --left: -2300px ;
+  --left: -1150px;
+  --hue: 345;
+  --angle: 345deg;
+  --index:69;
+}
+
+.panel {
+  width: 50px;
+  height: 100px;
+  transform: translate(20%, 50%) rotateY(var(--angle)) translateZ(190px);
+  position: absolute;
+  overflow: hidden;
+  color: hsl(var(--hue), 60%, 75%);
+  left: 170px;
+  bottom: 20px;
+}
+
+.panel::before {
+  content: "Eat, Sleep, Hack, Repeat";
+  font-size: 50px;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  left: var(--left);
+}
+
+.scene {
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+h1 {
+  transform-style: preserve-3d;
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */
