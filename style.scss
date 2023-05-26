@@ -44,7 +44,6 @@ h1{
     to{transform: rotateY(-360deg)}
 }
 section{
-    display: flex;
     perspective: 500px;
     // need perspective before we can do origin to look up top, this give the up down perspective
     perspective-origin: 50% calc(50% - 120px);
@@ -97,4 +96,8 @@ $width: 50px;
 h1{
     transform-style:preserve-3d ;
     background-color: black;
+}
+
+.tt{
+    color: lightpink;
 }
