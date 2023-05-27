@@ -10,6 +10,16 @@ html {
   color: var(--coder-green);
 }
 
+section > h2 {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h1 {
+  transform-style: preserve-3d;
+  background-color: black;
+}
+
 ul {
   display: flex;
   flex-direction: row-reverse;
@@ -28,6 +38,11 @@ a {
 main {
   display: flex;
   flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -52,16 +67,12 @@ section {
   perspective-origin: 50% calc(50% - 120px);
 }
 
-section > h2 {
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
 .panel:nth-child(1) {
   --left: 0px;
   --hue: 0;
   --angle: 0deg;
   --index:0;
+  --delay:0s;
 }
 
 .panel:nth-child(2) {
@@ -69,6 +80,7 @@ section > h2 {
   --hue: 15;
   --angle: 15deg;
   --index:3;
+  --delay:2s;
 }
 
 .panel:nth-child(3) {
@@ -76,6 +88,7 @@ section > h2 {
   --hue: 30;
   --angle: 30deg;
   --index:6;
+  --delay:4s;
 }
 
 .panel:nth-child(4) {
@@ -83,6 +96,7 @@ section > h2 {
   --hue: 45;
   --angle: 45deg;
   --index:9;
+  --delay:6s;
 }
 
 .panel:nth-child(5) {
@@ -90,6 +104,7 @@ section > h2 {
   --hue: 60;
   --angle: 60deg;
   --index:12;
+  --delay:8s;
 }
 
 .panel:nth-child(6) {
@@ -97,6 +112,7 @@ section > h2 {
   --hue: 75;
   --angle: 75deg;
   --index:15;
+  --delay:10s;
 }
 
 .panel:nth-child(7) {
@@ -104,6 +120,7 @@ section > h2 {
   --hue: 90;
   --angle: 90deg;
   --index:18;
+  --delay:12s;
 }
 
 .panel:nth-child(8) {
@@ -111,6 +128,7 @@ section > h2 {
   --hue: 105;
   --angle: 105deg;
   --index:21;
+  --delay:14s;
 }
 
 .panel:nth-child(9) {
@@ -118,6 +136,7 @@ section > h2 {
   --hue: 120;
   --angle: 120deg;
   --index:24;
+  --delay:16s;
 }
 
 .panel:nth-child(10) {
@@ -125,6 +144,7 @@ section > h2 {
   --hue: 135;
   --angle: 135deg;
   --index:27;
+  --delay:18s;
 }
 
 .panel:nth-child(11) {
@@ -132,6 +152,7 @@ section > h2 {
   --hue: 150;
   --angle: 150deg;
   --index:30;
+  --delay:20s;
 }
 
 .panel:nth-child(12) {
@@ -139,6 +160,7 @@ section > h2 {
   --hue: 165;
   --angle: 165deg;
   --index:33;
+  --delay:22s;
 }
 
 .panel:nth-child(13) {
@@ -146,6 +168,7 @@ section > h2 {
   --hue: 180;
   --angle: 180deg;
   --index:36;
+  --delay:24s;
 }
 
 .panel:nth-child(14) {
@@ -153,6 +176,7 @@ section > h2 {
   --hue: 195;
   --angle: 195deg;
   --index:39;
+  --delay:26s;
 }
 
 .panel:nth-child(15) {
@@ -160,6 +184,7 @@ section > h2 {
   --hue: 210;
   --angle: 210deg;
   --index:42;
+  --delay:28s;
 }
 
 .panel:nth-child(16) {
@@ -167,6 +192,7 @@ section > h2 {
   --hue: 225;
   --angle: 225deg;
   --index:45;
+  --delay:30s;
 }
 
 .panel:nth-child(17) {
@@ -174,6 +200,7 @@ section > h2 {
   --hue: 240;
   --angle: 240deg;
   --index:48;
+  --delay:32s;
 }
 
 .panel:nth-child(18) {
@@ -181,6 +208,7 @@ section > h2 {
   --hue: 255;
   --angle: 255deg;
   --index:51;
+  --delay:34s;
 }
 
 .panel:nth-child(19) {
@@ -188,6 +216,7 @@ section > h2 {
   --hue: 270;
   --angle: 270deg;
   --index:54;
+  --delay:36s;
 }
 
 .panel:nth-child(20) {
@@ -195,6 +224,7 @@ section > h2 {
   --hue: 285;
   --angle: 285deg;
   --index:57;
+  --delay:38s;
 }
 
 .panel:nth-child(21) {
@@ -202,6 +232,7 @@ section > h2 {
   --hue: 300;
   --angle: 300deg;
   --index:60;
+  --delay:40s;
 }
 
 .panel:nth-child(22) {
@@ -209,6 +240,7 @@ section > h2 {
   --hue: 315;
   --angle: 315deg;
   --index:63;
+  --delay:42s;
 }
 
 .panel:nth-child(23) {
@@ -216,6 +248,7 @@ section > h2 {
   --hue: 330;
   --angle: 330deg;
   --index:66;
+  --delay:44s;
 }
 
 .panel:nth-child(24) {
@@ -223,6 +256,7 @@ section > h2 {
   --hue: 345;
   --angle: 345deg;
   --index:69;
+  --delay:46s;
 }
 
 .panel {
@@ -248,11 +282,6 @@ section > h2 {
 .scene {
   transform-style: preserve-3d;
   position: relative;
-}
-
-h1 {
-  transform-style: preserve-3d;
-  background-color: black;
 }
 
 .tt {

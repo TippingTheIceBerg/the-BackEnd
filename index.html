@@ -63,6 +63,13 @@
             <h3>To write on the terminal</h3>
             <p>System.out.print("") with S being capital and it being in quotes. However this prints all on one line, using println this will print per line. However the escape sequence of \n can also work as before within the quotes.</p>
             <p class="tt">Using <b>sysout</b> with Visual studio code will allow us to quickly type the System.out.print statement saving time.</p>
+            <h3>Declaring and assigning variables</h3>
+            <p>We will use int for integers instead of let like in Js. However, long numbers will use long instead of int and they must end with L <code>long x = 12312321323122L</code>. We also have the option of char for one character. If we want a decimal we can use float, and it is convention to end it with a f. <code>float y = 123.01f</code> but a double is better since we don't need the f and we can store more. <code>double y = 234.3</code>Lastly string is a reference data type, so it must be a capital S <code>String = "John"</code></p>
+            <h3>User Input</h3>
+            <p>User input is done with a package insert. For VS code we can simply enter the emmet for Scanner and all the right imports will occur for us. If we are using an int, instead of nextLine, we will say <code>nextInt</code> otherwise we will get a mismatch.</p>
+            <img src="./images/Java/scannerUserInput.png" alt="">
+            <p class="tt">When getting a user number followed by another method of userString we can get the program just releasing all current info without asking the next question since the userInt will have a \n entered and thus make the machine thing that is what we want.  A fix for this will be to include the scanner.NextLine after the int is saved as a variable.</p>
+            <img src="./images/Java/userIntIssue.png" alt="">
         </section>
         <section id="NodeJS">
             <h2>Node JS</h2>

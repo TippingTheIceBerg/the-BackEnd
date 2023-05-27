@@ -10,8 +10,17 @@ html{
     background-color: black;
     color: var(--coder-green);
 }
+section > h2{
+    margin: 0 auto;
+    padding: 20px 0;
+}
 
+h1{
+    transform-style:preserve-3d ;
+    background-color: black;
+}
 
+// nav 
 ul{
     display: flex;
     flex-direction: row-reverse;
@@ -28,33 +37,39 @@ main{
     display: flex;
     flex-direction: column;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
+// start of rotating banner
 h1{
     margin: 0 auto;
     padding: 30px 0px;
     position: relative;
     border-radius: 200px;
 }
-
+// holds all panels
 .banner__container{
     // text will fall flat if removed
     transform-style:preserve-3d ;
     animation: rotate 12s infinite linear;
 }
+
 @keyframes rotate{
     to{transform: rotateY(-360deg)}
 }
+// this causes look up to down perspective/tilt looking
 section{
-    perspective: 500px;
+    perspective:500px;
     // need perspective before we can do origin to look up top, this give the up down perspective
     perspective-origin: 50% calc(50% - 120px);
 
 }
-section > h2{
-    margin: 0 auto;
-    padding: 20px 0;
-}
+
 // changing this width into smaller values allows us to add more panel and use them.
 $width: 50px;
+
+// controls all individual panels
 
 @for $i from 0 to 24{
     .panel:nth-child(#{$i+1}){
@@ -63,8 +78,11 @@ $width: 50px;
         --hue: #{360/24*$i};
         --angle: #{360deg/24*$i}; 
         --index:#{$i * 3};
+        --delay:#{$i * 2s};
     }
 }
+
+
 .panel{
     width: $width;
     height: 100px;
@@ -76,7 +94,9 @@ $width: 50px;
     color:hsl(var(--hue),60%,75%);
     left: 170px;
     bottom: 20px;
+
 }
+
 
 
 .panel::before{
@@ -86,17 +106,13 @@ $width: 50px;
     width: max-content;
     left: var(--left);
 }
+// without this the rotating image will never be at the back
 .scene{
     transform-style: preserve-3d;
     position: relative;
 }
 
 
-
-h1{
-    transform-style:preserve-3d ;
-    background-color: black;
-}
 
 .tt{
     color: lightpink;
