@@ -54,6 +54,26 @@
                 
             </div>
         </h1>
+        <section id="general">
+            <h2>General Back End</h2>
+            <h3>What is backend?</h3>
+                <p>While front end focuses more on client side, this focuses more on server side. When we check to see if the username and password match, we will use backend.
+                    <a href="https://www.codecademy.com/article/back-end-architecture" target="_blank"></a>
+                </p>
+                <h3>Backend composed of three parts.</h3>
+                <p>The backend is SAD<ul>
+                    <li>Server - computer that gets the request. Most common being apache Nginx.</li>
+                    <li>The App - the app that listens for the request.</li>
+                    <li>Database - organize the data. With the most common being MongoDB, mySQl, and PostgreSQL</li>
+                </ul></p>
+                <h3>What are Frameworks?</h3>
+                <p>Code that is typically very common that also gives structure to code.
+                    <a href="https://dev.to/aspittel/what-is-a-web-framework-and-why-should-i-use-one-38c0" target="_blank"></a>
+                Some popular front end frameworks include react and angular, while popular backend ones are django and ruby.
+                </p>
+                <h3>What is an API?</h3>
+                <p>It means application programming interface. Which can either mean documentation or how the application interact with one another.</p>
+        </section>
         <section id="Java">
             <h2>Java</h2>
             <h3>What is a Class?</h3>
@@ -66,14 +86,47 @@
             <h3>Declaring and assigning variables</h3>
             <p>We will use int for integers instead of let like in Js. However, long numbers will use long instead of int and they must end with L <code>long x = 12312321323122L</code>. We also have the option of char for one character. If we want a decimal we can use float, and it is convention to end it with a f. <code>float y = 123.01f</code> but a double is better since we don't need the f and we can store more. <code>double y = 234.3</code>Lastly string is a reference data type, so it must be a capital S <code>String = "John"</code></p>
             <h3>User Input</h3>
-            <p>User input is done with a package insert. For VS code we can simply enter the emmet for Scanner and all the right imports will occur for us. If we are using an int, instead of nextLine, we will say <code>nextInt</code> otherwise we will get a mismatch.</p>
+            <p>User input is done with a package insert. For VS code we can simply enter the emmet for Scanner and all the right imports will occur for us. If we are using an int, instead of nextLine, we will say <code>nextInt</code> otherwise we will get a mismatch. Scanner.next() will allow the next key to be stored.</p>
             <img src="./images/Java/scannerUserInput.png" alt="">
-            <p class="tt">When getting a user number followed by another method of userString we can get the program just releasing all current info without asking the next question since the userInt will have a \n entered and thus make the machine thing that is what we want.  A fix for this will be to include the scanner.NextLine after the int is saved as a variable.</p>
+            <img src="./images/Java/nexrKeyInput.png" alt="">
+            <p class="tt">When getting a user number followed by another method of nextLn we can get the program just releasing all current info without asking the next question since the nextInt will have a \n entered and thus make the machine think that is what we want.  A fix for this will be to include the scanner. NextLine after the int is saved as a variable, this will remove the \n.</p>
             <img src="./images/Java/userIntIssue.png" alt="">
+            <h3>Basic GUI</h3>
+            <p>We can create basic GUI for questions with using an import Javax.</p>
+            <img src="./images/Java/basicGuI.png" alt="">
+            <p class="tt">When using this show input dialogue option, this only takes it as a string, to store as a integer or double we need to parse it to the correct file type </p>
+            <h3>Simple Triangle Line</h3>
+            <p>Basic use of math, remember that we need to declare Math first</p>
+            <img src="./images/Java/simpleMathTriangle.png" alt="">
+            <h3>Use of Random</h3>
+            <p>To get random values we have to import them, and for the range we state the value inside the parenthesis. If we want to start off 0, we add a + 1 outside the parenthesis as seen in the image.</p>
+            <img src="./images/Java/randonNumber.png" alt="">
+            <h3>Strings is Equal method</h3>
+            <p>Whenever we are using strings to compare things, we <b>MUST</b> use .equals since this is proper format.</p>
+            <img src="./images/Java/equalsMethod.png" alt="">
+            <h3>While Loop</h3>
+            <p>While same as javascript, but here we have the method isBlank which tets to see if something is empty.</p>
+            <img src="./images/Java/whileLoop.png" alt="">
+            <h3>Creating arrays</h3>
+            <p>Arrays need to be declared before the array starts, and all data types are consistent. For 2D arrays we can think of the like rows and columns.</p>
+            <img src="./images/Java/creatingArrays.png" alt="">
+            <img src="./images/Java/creatingArraysMethod2.png" alt="">
+            <img src="./images/Java/2Darray.png" alt="">
+            <h3>Wrappers</h3>
+            <p>Wrappers are essentially a way to make primitive data types into reference data types, which allows us to use more methods, however they take longer to process since we need to go within the wrapper. Called not so differently as we would for int, but wrappers are almost always all the way spelled out and the first letter capital. <code>Integer a = 3</code></p>
+            <p class="tt">Strings are already reference types, which is way we have always called it with a capital S.</p>
+            <h3>Array Lists</h3>
+            <p>Collection of resizable arrays. They can be added or removed, but can only store reference types. We do need an import of java.util.ArrayList at the top. </p>
+            <p class="tt">We can't use length or simple index, we need to use size, and get respectively. Some pretty popular methods for array list is included as well.</p>
+            <img src="./images/Java/arrayList.png" alt="">
+            <img src="./images/Java/popularArrListMeoth.png" alt="">
+            <img src="./images/Java/ArrListInArrList.png" alt="">
+            <h3>For each loop</h3>
+            <p>Works the same as JS but the phrasing is different, but works the same in theory.</p>
+            <img src="./images/Java/forEachLoop.png" alt="">
         </section>
         <section id="NodeJS">
             <h2>Node JS</h2>
-            
         </section>
     </main>
     <footer></footer>

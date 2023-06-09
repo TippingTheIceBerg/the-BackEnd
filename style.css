@@ -8,6 +8,8 @@ html {
   box-sizing: border-box;
   background-color: black;
   color: var(--coder-green);
+  line-height: 1.6;
+  margin: 0px 30px;
 }
 
 section > h2 {
