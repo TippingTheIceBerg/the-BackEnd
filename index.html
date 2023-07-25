@@ -75,6 +75,7 @@
                 <p>It means application programming interface. Which can either mean documentation or how the application interact with one another.</p>
         </section>
         <section id="Java">
+            <h2>COMMAND + SHIFT + 5 SELECT Screen capture</h2>
             <h2>Java</h2>
             <h3>What is a Class?</h3>
             <p>A collection of related code. To make one, simply go onto the file and click the + sign on the Java projects tab and then select class.</p>
@@ -202,6 +203,28 @@
             <h3>File Write</h3>
             <p>For file write we will need a try catch block as well as a import of file writer. The method is the write method. We can also append to the end of the file with append.</p>
             <img src="./images/Java/filreWriter.png" alt="">
+            <h3>How to play audio</h3>
+            <p>We can find samples of audio at <a target="_blank" href="https://studio.youtube.com/channel/UCEesi3XKcsBXHnbVzI-wZnw/music">Youtube Audio Library</a>Though it doesn't work as MP3 files, so you will need to convert them to wav files. Import to note we need to add lots of throws of try catch block to catch missing things otherwise it won't work. We also need to make sure the program doesn't terminate, we can stop this with just waiting for user input with a scanner. We also will create an audio player that uses what we enter to play and stop audio. </p>
+            <img src="./images/Java/howToRunAudio.png" alt="">
+            <img src="./images/Java/audioPlayer.png" alt="">
+            <h3>JFRAME</h3>
+            <p>A gui window we add components to. Jframes are not visible, we need to set the frame to visible and very small. We can make it bigger with setSize(). We also need a jframe import. We can change the title with setTitle. Remember to close out of frames with the setDefaultClose...(JFrameExitOn....) now when we hit the x we will close it properly, and not just hide it. Resizable will prevent the frame from being resized. We can set an icon with an import called ImageIcon and then set it with frame.setIconImage. We can also create a frame with making the JFrame as a parent class to a child class. For the class method, we need to replace them all with this instead of whatever we called the frame. Now we can call the Jframe if we are doing this second way of creating Jframes. </p>
+            <img src="./images/Java/JframeCreation.png" alt="">
+            <img src="./images/Java/JframeImports.png" alt="">
+            <img src="./images/Java/JFrameClass.png" alt="">
+            <img src="./images/Java/JFrameClassSetUp.png" alt="">
+            <img src="./images/Java/callingJFrame.png" alt="">
+            <h3>Labels</h3>
+            <p>GUI component, displays and img or a string or text. Similar to creating a Jframe, even the import is similar. An easily missed step will be adding the label onto the Jframe with the frame.add method. Without changing anything, the string will be center and to the left. Creating an image is straightforward as well, if under the same project folder we don't need to do a path, just call the img. To move the text around, we adjust the vertical or horizontal position, and they are relative to the img. We can also change the color and font, for color in the image it does hexadecimal, but we can also do rgb with just using 0,0,0 (don't include the word rgb, just the 0s and commas). If we want to set a background color, we must have opaque set to true, otherwise nothing will happen, they are a pair. We can also create border, this does need an import. We can also move the whole img and string combo around the label since naturally it will be center vertically, but left horizontally. Lastly we can use pack with help with resizing, just note it must be added last, it won't work if it's not last.</p>
+            <img src="./images/Java/simpleLabel.png" alt="">
+            <img src="./images/Java/labelImg.png" alt="">
+            <img src="./images/Java/moveLabelText.png" alt="">
+            <img src="./images/Java/chngeLabelColor.png" alt="">
+            <img src="./images/Java/labelBG.png" alt="">
+            <img src="./images/Java/border1.png" alt="">
+            <img src="./images/Java/border2.png" alt="">
+            <img src="./images/Java/moveImgString.png" alt="">
+            <img src="./images/Java/pack.png" alt="">
         </section>
         <section id="NodeJS">
             <h2>Node JS</h2>
